@@ -26,7 +26,7 @@ export default function ReferencesPage() {
       <main className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <p className="font-sans text-xs tracking-[0.18em] text-gold uppercase">Bibliography</p>
         <h1 className="mt-3 font-serif text-4xl">参考书目</h1>
-        <p className="mt-5 font-serif text-lg leading-9 text-ink-soft">
+        <p className="mt-5 text-lg leading-9 text-ink-soft">
           下列来源都在筹备课程时实际查阅过，并在正文中被引用或作为结构依据。本站只做引用与概括，不提供受版权保护的书籍或文章的全文转载。链接指向出版社、期刊或作者公开页面；若个别链接日后失效，请按作者与标题检索。
         </p>
         {order.map((kind) => (
@@ -37,7 +37,7 @@ export default function ReferencesPage() {
                 .filter((item) => item.kind === kind)
                 .map((item) => (
                   <li key={item.id} className="border-b border-rule pb-5">
-                    <p className="font-serif text-lg leading-7">
+                    <p className="font-serif text-lg">
                       {item.url ? (
                         <a href={item.url} target="_blank" rel="noopener noreferrer">
                           {item.title}

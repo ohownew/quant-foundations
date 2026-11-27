@@ -17,7 +17,7 @@ export function LabBox({ title, children }: { title?: string; children: ReactNod
       </p>
       <h3 className="!mt-2 !mb-3 !border-0 !text-lg">{title ?? "用研究环境验证原理"}</h3>
       <div className="text-[0.98rem] leading-7">{children}</div>
-      <p className="mt-3 font-sans text-xs leading-5 text-ink-soft">
+      <p className="mt-3 font-sans text-xs leading-6 text-ink-soft">
         实验用来核对原理，不是本课的主线。不必登录本站，也不要把 API 密钥写进任何课程文件。若使用真实行情，请自行记录样本区间，不要把一次练习的数字当成可重复的业绩。
       </p>
     </section>
@@ -34,7 +34,7 @@ export function Note({ children }: { children: ReactNode }) {
 
 export function FigureCaption({ children }: { children: ReactNode }) {
   return (
-    <p className="mt-2 font-sans text-xs leading-5 text-ink-soft">
+    <p className="mt-2 font-sans text-xs leading-6 text-ink-soft">
       <span className="font-semibold tracking-wide text-gold">示意 · </span>
       {children}
     </p>

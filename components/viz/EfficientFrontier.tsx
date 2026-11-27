@@ -53,7 +53,7 @@ export function EfficientFrontier() {
             className="w-56 accent-cinnabar"
           />
         </label>
-        <p className="text-xs leading-5 text-ink-faint">
+        <p className="text-xs leading-6 text-ink-faint">
           示意参数：A 的期望 8%、波动 15%；B 的期望 12%、波动 22%。权重可超出 0 与 1，表示允许卖空。
         </p>
       </div>

@@ -17,7 +17,7 @@ export default function PathPage() {
       <main className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
         <p className="font-sans text-xs tracking-[0.18em] text-gold uppercase">Curriculum</p>
         <h1 className="mt-3 font-serif text-4xl">学习路径</h1>
-        <p className="mt-5 max-w-3xl font-serif text-lg leading-9 text-ink-soft">
+        <p className="mt-5 max-w-3xl text-lg leading-9 text-ink-soft">
           建议按这个顺序读：先建立市场与定价的经济学语言，再补上会被反复用到的数学，最后进入组合、因子、风险指标与回测的边界。全部共 {allLessons.length} 课。聚宽练习都放在各课末尾，可以后做。
         </p>
 
@@ -42,7 +42,7 @@ export default function PathPage() {
                       </p>
                       <p className="text-xs text-ink-faint">约 {lesson.minutes} 分钟</p>
                     </div>
-                    <p className="mt-1 text-sm leading-6 text-ink-soft">{lesson.subtitle}</p>
+                    <p className="mt-1 text-sm leading-7 text-ink-soft">{lesson.subtitle}</p>
                   </Link>
                 ))}
               </div>
