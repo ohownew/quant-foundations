@@ -45,7 +45,7 @@ export function Sidebar() {
                   <li key={lesson.id}>
                     <Link
                       href={lesson.href}
-                      className={`flex items-start gap-2 rounded-sm px-2 py-2 text-sm leading-5 no-underline transition-colors ${
+                      className={`flex items-start gap-2 rounded-sm px-2 py-2 text-sm leading-6 no-underline transition-colors ${
                         active ? "bg-white/10 text-paper" : "text-sidebar-muted hover:bg-white/5 hover:text-paper"
                       }`}
                     >
@@ -57,7 +57,7 @@ export function Sidebar() {
                       >
                         {checked ? "✓" : ""}
                       </span>
-                      <span>
+                      <span className="text-balance">
                         <span className="mr-1 font-mono text-[11px] text-gold">{lesson.number}</span>
                         {lesson.title}
                       </span>

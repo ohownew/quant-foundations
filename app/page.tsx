@@ -18,10 +18,10 @@ export default function HomePage() {
               <p className="font-sans text-xs font-semibold tracking-[0.22em] text-gold uppercase">
                 Quant Foundations
               </p>
-              <h1 className="mt-4 font-serif text-5xl leading-tight font-semibold tracking-wide text-ink sm:text-6xl">
+              <h1 className="mt-4 font-serif text-5xl font-semibold tracking-wide text-ink sm:text-6xl">
                 量化原理
               </h1>
-              <p className="mt-6 max-w-2xl font-serif text-xl leading-9 text-ink-soft">
+              <p className="mt-6 max-w-2xl text-xl leading-9 text-ink-soft">
                 {course.tagline}课程的核心是市场为什么可以被建模，收益与风险应如何度量，以及均衡与无套利给出怎样的约束。
               </p>
               <p className="mt-4 max-w-2xl text-base leading-8 text-ink-soft">
@@ -57,7 +57,7 @@ export default function HomePage() {
                       {mod.kicker}
                     </p>
                     <p className="font-serif text-lg text-ink">{mod.title}</p>
-                    <p className="text-ink-soft">{mod.description}</p>
+                    <p className="leading-7 text-ink-soft">{mod.description}</p>
                   </li>
                 ))}
               </ol>

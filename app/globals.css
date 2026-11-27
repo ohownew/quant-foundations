@@ -17,9 +17,20 @@
   --color-sidebar: #161714;
   --color-sidebar-muted: #9a9488;
   --color-gold: #8a6a32;
-  --font-sans: var(--font-sans), "Source Sans 3", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-serif), "Noto Serif SC", "Source Serif 4", "Songti SC", serif;
-  --font-mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: var(--font-text);
+  --font-serif: var(--font-text);
+  --font-mono: var(--font-code);
+}
+
+/*
+  One screen sans system. Source Sans 3 draws Latin; Noto Sans SC (Source Han Sans)
+  draws Chinese. `.font-serif` is a display role in that same family — weight and
+  tracking — so titles never fall through to a Ming/Song serif.
+*/
+:root {
+  --font-text: var(--font-source-sans), var(--font-noto-sans-sc), "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --font-code: var(--font-ibm-mono), "IBM Plex Mono", ui-monospace, monospace;
 }
 
 html {
@@ -34,7 +45,10 @@ body {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
+  font-weight: 400;
+  line-height: 1.75;
+  line-break: strict;
   min-height: 100%;
 }
 
@@ -43,21 +57,33 @@ body {
   color: var(--color-ink);
 }
 
-.font-serif {
-  font-family: var(--font-serif);
+.font-sans,
+.lesson-body {
+  font-family: var(--font-text);
 }
 
-.font-sans {
-  font-family: var(--font-sans);
+.font-serif {
+  font-family: var(--font-text);
+  /* Beats Tailwind text-* line-heights (text-4xl is ~1.11), which crowd wrapped Chinese titles. */
+  line-height: 1.45;
 }
 
 .font-mono {
-  font-family: var(--font-mono);
+  font-family: var(--font-code);
+  letter-spacing: 0;
+}
+
+@layer components {
+  .font-serif {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
 }
 
 .lesson-body {
-  font-family: var(--font-serif);
   font-size: 1.0625rem;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.9;
   color: var(--color-ink);
 }
@@ -70,7 +96,7 @@ body {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  line-height: 1.45;
+  line-height: 1.55;
   margin-top: 2.4em;
   margin-bottom: 0.7em;
   padding-bottom: 0.35em;
@@ -80,6 +106,8 @@ body {
 .lesson-body h3 {
   font-size: 1.12rem;
   font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1.55;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
 }
@@ -111,9 +139,11 @@ body {
 .lesson-body table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.92rem;
-  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75;
   margin: 1.4em 0;
 }
 

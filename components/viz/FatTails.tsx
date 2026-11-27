@@ -92,7 +92,7 @@ export function FatTails() {
             className="w-56 accent-cinnabar"
           />
         </label>
-        <p className="max-w-sm text-xs leading-5 text-ink-faint">
+        <p className="max-w-sm text-xs leading-6 text-ink-faint">
           自由度越小，尾部越厚。ν 很大时，曲线会靠近正态分布。
         </p>
       </div>

@@ -32,7 +32,7 @@ export default function CourseIndexPage() {
                         <span className="mr-2 font-mono text-sm text-gold">{lesson.number}</span>
                         {lesson.title}
                       </p>
-                      <p className="text-sm text-ink-soft">{lesson.subtitle}</p>
+                      <p className="mt-1 text-sm leading-7 text-ink-soft">{lesson.subtitle}</p>
                     </Link>
                   </li>
                 ))}

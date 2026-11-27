@@ -21,11 +21,11 @@ export function LessonArticle({
         <p className="font-sans text-xs font-semibold tracking-[0.18em] text-gold uppercase">
           {mod?.kicker} · {mod?.title}
         </p>
-        <h1 className="mt-3 font-serif text-4xl leading-tight font-semibold">
+        <h1 className="mt-3 font-serif text-4xl font-semibold">
           <span className="mr-3 font-mono text-2xl text-cinnabar">{lesson.number}</span>
           {lesson.title}
         </h1>
-        <p className="mt-4 font-serif text-xl leading-8 text-ink-soft">{lesson.subtitle}</p>
+        <p className="mt-4 text-xl leading-9 text-ink-soft">{lesson.subtitle}</p>
         <p className="mt-2 font-sans text-sm text-ink-faint">建议阅读时间约 {lesson.minutes} 分钟</p>
         <div className="lesson-body mt-10">{children}</div>
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-rule pt-6">

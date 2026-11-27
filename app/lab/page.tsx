@@ -17,7 +17,7 @@ export default function LabPage() {
       <main className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <p className="font-sans text-xs tracking-[0.18em] text-gold uppercase">Laboratory</p>
         <h1 className="mt-3 font-serif text-4xl">把聚宽当作实验室</h1>
-        <p className="mt-5 font-serif text-lg leading-9 text-ink-soft">
+        <p className="mt-5 text-lg leading-9 text-ink-soft">
           本课的主线是原理。聚宽（JoinQuant）只是一个可选的研究环境：你可以在里面取行情、写几行统计或回归，看看课堂上的定义在数据上长什么样。它不是目录结构，也不承担“教你如何点回测按钮”的任务。
         </p>
         <h2 className="mt-10 font-serif text-2xl">建议的使用方式</h2>
@@ -39,7 +39,7 @@ export default function LabPage() {
                 <p className="font-serif text-lg">
                   <Link href={lesson.href}>{lesson.title}</Link>
                 </p>
-                <p className="mt-1 text-sm leading-6 text-ink-soft">{lesson.lab}</p>
+                <p className="mt-1 text-sm leading-7 text-ink-soft">{lesson.lab}</p>
               </div>
             )),
           )}
