@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme inline {
+  --color-paper: #f3eee4;
+  --color-paper-2: #e8e0d1;
+  --color-paper-3: #ddd4c4;
+  --color-ink: #1b1914;
+  --color-ink-soft: #5c574c;
+  --color-ink-faint: #8a8376;
+  --color-rule: #d4cbb8;
+  --color-rule-strong: #b9ae97;
+  --color-cinnabar: #9c2f2f;
+  --color-cinnabar-soft: #c45c4a;
+  --color-pine: #2c4a3e;
+  --color-pine-soft: #3e6b59;
+  --color-sidebar: #161714;
+  --color-sidebar-muted: #9a9488;
+  --color-gold: #8a6a32;
+  --font-sans: var(--font-sans), "Source Sans 3", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), "Noto Serif SC", "Source Serif 4", "Songti SC", serif;
+  --font-mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100%;
+}
+
+::selection {
+  background: #e6d3b5;
+  color: var(--color-ink);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.lesson-body {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.9;
+  color: var(--color-ink);
+}
+
+.lesson-body > * + * {
+  margin-top: 1.15em;
+}
+
+.lesson-body h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.lesson-body h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.lesson-body p {
+  text-wrap: pretty;
+}
+
+.lesson-body ul,
+.lesson-body ol {
+  padding-left: 1.4em;
+  margin-top: 0.8em;
+}
+
+.lesson-body li + li {
+  margin-top: 0.4em;
+}
+
+.lesson-body a {
+  color: var(--color-cinnabar);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+.lesson-body a:hover {
+  color: var(--color-cinnabar-soft);
+}
+
+.lesson-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 1.4em 0;
+}
+
+.lesson-body th,
+.lesson-body td {
+  border-bottom: 1px solid var(--color-rule);
+  padding: 0.55em 0.65em;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lesson-body th {
+  font-weight: 600;
+  color: var(--color-pine);
+  background: color-mix(in srgb, var(--color-paper-2) 80%, white);
+}
+
+.lesson-body blockquote {
+  border-left: 2px solid var(--color-cinnabar);
+  padding: 0.15em 0 0.15em 1em;
+  color: var(--color-ink-soft);
+  font-style: normal;
+}
+
+.katex-display,
+.math-block {
+  margin: 1.25em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.35em 0;
+}
+
+.math-block {
+  background: color-mix(in srgb, var(--color-paper-2) 65%, white);
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  padding: 0.9em 1em;
+}
+
+.math-inline .katex {
+  font-size: 1.02em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
